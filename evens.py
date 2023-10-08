@@ -8,7 +8,23 @@ def even_number_of_evens(numbers):
     if the number of even numbers is 0, return False
     if the number of even numbers is even, return True
     """
-    return None
+    if isinstance(numbers, list):
+        if numbers == []:
+            return False
+        else:
+            evens = 0
+        for n in numbers:
+            if n % 2 == 0:
+                evens += 1
+            # else:
+            #     return False
+        if evens:
+            return evens % 2 == 0
+        else:
+            return False
+    else:
+        raise TypeError("A list was not passed into the function")
+
 
 # this allows us to limit this function to be run only when is called
 # in this file, with command python3 evens.py
