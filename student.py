@@ -15,5 +15,8 @@ class Student:
         self.end_date = date.today() + timedelta(days=365)
         self.naughtly_list = False
 
-    def fule_name(self):
+    # the poperty decorator to highlight that this is
+    # get data method only
+    @property
+    def full_name(self):
         return f"{self._first_name} {self._last_name}"
