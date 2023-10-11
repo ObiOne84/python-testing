@@ -16,7 +16,7 @@ class Student:
         self.naughtly_list = False
 
     # the poperty decorator to highlight that this is
-    # get data method only
+    # get data method only (read only)
     @property
     def full_name(self):
         return f"{self._first_name} {self._last_name}"
